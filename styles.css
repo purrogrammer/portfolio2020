@@ -32,7 +32,7 @@ nav ul a:hover {
   background: #474747;
   display: flex;
   justify-content: space-between;
-  border-bottom: 3px solid #AD343E;
+  border-bottom: 3px solid #0bce1c;
 }
 
 
@@ -40,18 +40,18 @@ nav ul a:hover {
   width: 30px;
   height: 3px;
   margin: 7px;
-  background: #AD343E;
+  background: #474747;
 }
 .btn {
   padding: 2px;
   display: inline-block;
-  border: 2px solid #AD343E;
+  border: 2px solid #474747;
   align-self: center;
 }
 
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/header-cat.jpeg) center/cover fixed no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)), url(img/header-cat.jpeg) center/cover fixed no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -69,19 +69,27 @@ nav {
 }
 
 .banner h1 {
-  font-size: 50px;
-  text-transform: uppercase;
-  color: #6baa7;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 30px;
+text-transform: uppercase;
+color: #0d1317;
+text-shadow: -1px -1px 0 rgb(36, 190, 16), 1px -1px 0 rgb(97, 230, 44), -1px 1px 0 #6baa75, 1px 1px 0 rgb(106, 197, 32); 
+font-style: italic;
 }
 
 .banner h3 {
-  text-transform: capitalize;
-  font-size: 30px;
+  /* text-transform: capitalize; */
+  font-size: 25px;
+  font-style: italics;
   color: #0d1317;
+  text-shadow: -1px -1px #0bce1c; 
+  font-style: italic;
 }
 
-.and {
-  color: #f5f3f5;
+.purr {
+  color: #0bce1c;
+  text-shadow: -1px -1px #0d1317; 
+font-style: italic;
 }
 
 .banner-icons {
@@ -128,7 +136,6 @@ nav {
   .nav-container {
     display: none;
   }
-
 }
 
 /*################services##############*/
@@ -203,7 +210,7 @@ nav {
 .title-underline {
   width: 100px;
   height: 4px;
-  background: #AD343E;
+  background: #0bce1c;
   margin: 10px auto;
 
 }
@@ -293,9 +300,9 @@ nav {
 
 .about-card .far fa-hand-spock {
   font-size: 60px;
-  color: #0bce1c;
-  outline: #0d1317;
-  margin: 20px 0;
+  color: #0a8f15;
+  text-decoration-color: #0d1317;
+  margin: 20px 0;te
 }
 
 .about-card p {
@@ -316,17 +323,17 @@ nav {
 }
 
 /*##############filler############*/
-
+/* 
 .filler {
   min-height: 60vh;
   background: url(img/filler-bcg.jpeg) center/cover fixed no-repeat;
-}
+} */
 
 /*###############contact##########*/
 
 .contact {
   min-height: 80vh;
-  background: url(img/about-bcg.jpeg) center/cover fixed no-repeat;
+  background: url(img/projects-1.jpeg) center/cover fixed no-repeat;
   /*  3last*/
   display: flex;
   justify-content: center;
@@ -358,19 +365,19 @@ form input {
 
 form h3 {
   text-align: center;
-  text-transform: uppercase;
-  color: #AD343E;
+  /* text-transform: uppercase; */
+  color: #0bce1c;
 }
 
 form input,
 form textarea {
   padding: 5px;
-  border: 3px solid #ad343e;
+  border: 3px solid #0bce1c;
 }
 
 input::placeholder,
 textarea::placeholder {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #0d1317;
 }
 
@@ -379,13 +386,13 @@ textarea::placeholder {
   font-size: 20px;
   border-radius: 40px;
   padding: 5px;
-  background: #AD343E;
+  background: #0bce1c;
   color: #f5f3f5;
   transition: color 1s ease-in-out, background 1s ease-in-out;
 }
 
 .form-btn:hover {
-  color: #AD343E;
+  color: #0bce1c;
   background: #f5f3f5;
 }
 

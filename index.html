@@ -117,35 +117,43 @@
       <div class="projects-container">
           <div class="cards">
               <article class="card">
-                <img src="img/codelang.jpeg" alt="Sample photo">
+                <img src="img/codelang.jpeg" alt="phto of code language">
                 <div class="text">
-                  <h3>Seamlessly visualize quality</h3>
-                  <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
-                  <button>Here's why</button>
+                  <h3>Down To Hike</h3>
+                  <p>A C#/SQL web app that connects hikers to trails and fellow hikers. 
+                  <p></p>
+                  </p>
+                  <button onclick="window.location.href='https://github.com/purrogrammer';">View repo!</button>
                 </div>
               </article>
+
               <article class="card">
-                <img src="img/cat3.jpeg" alt="Sample photo">
+                <img src="img/lososos.jpeg" alt="photo of trees and sun">
                 <div class="text">
-                  <h3>Completely Synergize</h3>
+                  <h3>Greening Los Osos</h3>
                   <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
                   <button>Here's how</button>
                 </div>
               </article>
+
               <article class="card">
                 <img src="img/cat4.jpg" alt="Sample photo">
                 <div class="text">
                   <h3>Dynamically Procrastinate</h3>
                   <p>Completely synergize resource taxing relationships via premier niche markets.</p>
-                  <button>Read more</button>
+                  <button class="project-btn">Read more</button>
                 </div>
               </article>
+              
               <article class="card">
-                <img src="img/cat3_resize.jpeg" alt="Sample photo">
+                <img src="img/cat3_resize.jpeg" alt="Cat photo">
                 <div class="text">
-                  <h3>Best in class</h3>
-                  <p>Imagine jumping into that boat, and just letting it sail wherever the wind takes you...</p>
-                  <button>Just do it...</button>
+                  <h3>My Resume...</h3>
+                  <p>Download a printable PDF of my resume for your...purrusal.</p>
+                    <form method="get" action="img/res.pdf">
+                    <button type="submit">Download!</button>
+                 </form>
+                
                 </div>
               </article>
               <article class="card">
@@ -153,7 +161,7 @@
                 <div class="text">
                   <h3>Dynamically innovate supply chains</h3>
                   <p>Holisticly predominate extensible testing procedures for reliable supply chains.</p>
-                  <button>Here's why</button>
+                  <button class="project-btn">Here's why</button>
                 </div>
               </article>
               <article class="card">
@@ -161,15 +169,13 @@
                 <div class="text">
                   <h3>Sanity check</h3>
                   <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
-                  <button>Stop here</button>
+                  <button class="project-btn">Stop here</button>
                 </div>
               </article>
              </div>
             </div>
             </section>
-
-
-        
+       
     <!-- end of  projects section-->
 
   <!--about section-->
@@ -185,26 +191,67 @@
         dolore ex minima ab.</p>
     </div>
   </section>
+
   <!--end of about section-->
   <!-- filler section-->
   <section class="filler">
 
   </section>
   <!-- end of filler section-->
-  <!-- contact-->
+
+
+  <!-- ############# START contact section #################-->
+
   <a id="goToContact"></a>
   <section class="contact">
     <div class="contact-card">
       <form>
         <h3>get in touch</h3>
         <input type="text" id="name" placeholder="Your name">
-        <input type="email" id="name" placeholder="Your email">
+        <input type="email" id="email" placeholder="Your email">
         <textarea name="" id="" cols="30" rows="10" placeholder="Hi, I'd like to..."></textarea>
         <button type="submit" class="form-btn">Submit</button>
       </form>
     </div>
   </section>
+
   <!--end of contact-->
+
+      <!-- <form id="contact-form" method="POST" action="form-to-email.php">
+        <h3>get in touch</h3>
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+        <form id="contact-form" method="POST" action="form-to-email.php">
+    
+          <div class="control-group">
+            <label>Your Name</label>
+            <input class="fullname" type="text" name="fullname" />
+          </div>
+    
+          <div class="control-group">
+            <label>Email</label>
+            <input class="email" type="text" name="email" />
+          </div>
+    
+          <div class="control-group">
+            <label>Message</label>
+            <textarea class="message" name="message"></textarea>
+          </div>
+    
+          <div id="errors"></div>
+    
+          <div class="control-group no-margin">
+            <input type="submit" name="submit" value="Submit" id="submit" />
+          </div>
+    
+        </form>
+            <div id='msg_submitting'><h2>Submitting ...</h2></div>
+            <div id='msg_submitted'><h2>Thank you !<br> The form was submitted Successfully.</h2></div>
+      </div> -->
+ 
+
+  <!--end of contact-->
+
   <!-- footer section-->
   <footer>
     <div class="footer-icons">
@@ -225,9 +272,15 @@
     <p class="footer-text">Handmade with <i class="fas fa-heart"></i> in Seattle. All design and coding by Margueite, using 100% artisianal, organic, sustainable, farm-to-browser code. NOTE: No cats were harmed in the making of this site, although two were often forced to get off my laptop keyboard. </p>
     <p>&copy;2020 Marguerite Kennedy. All rights reserved</p>
   </footer>
+
+  <!--############ JavaScript & JQuerry Files ############-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script scr="scripts.js">
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/additional-methods.min.js"></script>
+  <script src="js/scripts.js">
   </script>
+  <!-- END JavaScript files -->
+
 </body>
 
 </html>

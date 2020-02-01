@@ -72,7 +72,7 @@ nav {
 
 .banner h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 30px;
+  font-size: 60px;
   text-transform: uppercase;
   color: #0d1317;
   /* color: black; */
@@ -384,7 +384,7 @@ media screen and (min-width: 700px) {
   text-decoration-color: #0d1317;
   margin: 20px 0;
 } */
-
+git 
 .about-card p {
   font-size: 15px;
   line-height: 1.5;

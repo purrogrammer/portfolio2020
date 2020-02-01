@@ -369,7 +369,7 @@ media screen and (min-width: 700px) {
 .about-card {
   background: rgba(255, 255, 255, 0.75);
   text-align: center;
-  padding: 30px 40px;
+  padding: 20px 30px;
 }
 
 .about-card h3 {
@@ -388,7 +388,7 @@ media screen and (min-width: 700px) {
 .about-card p {
   font-size: 15px;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media screen and (min-width:776px) {

@@ -205,52 +205,29 @@
   <a id="goToContact"></a>
   <section class="contact">
     <div class="contact-card">
-      <form>
-        <h3>get in touch</h3>
-        <input type="text" id="name" placeholder="Your name">
-        <input type="email" id="email" placeholder="Your email">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Hi, I'd like to..."></textarea>
-        <button type="submit" class="form-btn">Submit</button>
+
+    
+      <form action="https://formspree.io/f/mqkgljpg" method="POST">
+        <div id="name-form">
+            <h3>get in touch</h3>
+          <label for="name">Name:</label>
+          <input id="name" type="text" name="name" required minlength="4" />
+        </div>
+        <div class="email-form">
+          <label for="email">Email:</label>
+          <input id="email" type="email" required name="_replyto" />
+        </div>
+        <div class="message-form">
+                 <label for="message-text"></label>
+         <textarea name="message-area" id="message" cols="30" rows="10" placeholder="Hi, I'd like to..."></textarea>
+              </div>
+                 <button class="form-btn" value="Send" id="contact-btn" type="submit" >Submit</button>
       </form>
+
     </div>
   </section>
 
-  <!--end of contact-->
-
-      <!-- <form id="contact-form" method="POST" action="form-to-email.php">
-        <h3>get in touch</h3>
-        <div class="contact-form">
-            <h1>Contact Us</h1>
-        <form id="contact-form" method="POST" action="form-to-email.php">
-    
-          <div class="control-group">
-            <label>Your Name</label>
-            <input class="fullname" type="text" name="fullname" />
-          </div>
-    
-          <div class="control-group">
-            <label>Email</label>
-            <input class="email" type="text" name="email" />
-          </div>
-    
-          <div class="control-group">
-            <label>Message</label>
-            <textarea class="message" name="message"></textarea>
-          </div>
-    
-          <div id="errors"></div>
-    
-          <div class="control-group no-margin">
-            <input type="submit" name="submit" value="Submit" id="submit" />
-          </div>
-    
-        </form>
-            <div id='msg_submitting'><h2>Submitting ...</h2></div>
-            <div id='msg_submitted'><h2>Thank you !<br> The form was submitted Successfully.</h2></div>
-      </div> -->
- 
-
-  <!--end of contact-->
+ <!--end of contact-->
 
   <!-- footer section-->
   <footer>
@@ -269,11 +246,63 @@
           <i class="fab fa-linkedin"></i>
         </a>
     </div>
-    <p class="footer-text">Handmade with <i class="fas fa-heart"></i> in Seattle. All design and coding by Margueite, using 100% artisianal, organic, sustainable, farm-to-browser code. NOTE: No cats were harmed in the making of this site, although two were often forced to get off my laptop keyboard. </p>
+    <p class="footer-text">Handmade with <i class="fas fa-heart"></i> in Seattle. All design and coding by Marguerite, using 100% artisianal, organic, sustainable, farm-to-browser code. NOTE: No cats were harmed in the making of this site, although two were often forced to get off my laptop keyboard. </p>
     <p>&copy;2020 Marguerite Kennedy. All rights reserved</p>
   </footer>
 
-  <!--############ JavaScript & JQuerry Files ############-->
+  <!-- Formspree AJAX code for file submission via Formspree -->
+
+  <script>
+      window.addEventListener("DOMContentLoaded", function() {
+    
+        // get the form elements
+        
+        var form = document.getElementById("name-form");
+        var button = document.getElementById("contact-btn");
+        var status = document.getElementById("my-form-status");
+    
+        // Success and Error functions for after the form is submitted
+        
+        function success() {
+          form.reset();
+          button.style = "display: none ";
+          status.innerHTML = "Thanks!";
+        }
+    
+        function error() {
+          status.innerHTML = "Oops! There was a problem.";
+        }
+    
+        // handle the form submission event
+    
+        form.addEventListener("submit", function(ev) {
+          ev.preventDefault();
+          var data = new FormData(form);
+          ajax(form.method, form.action, data, success, error);
+        });
+      });
+      
+      // helper function for sending an AJAX request
+    
+      function ajax(method, url, data, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+          } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+          }
+        };
+        xhr.send(data);
+      }
+    </script>
+
+  <!--############ Other JavaScript & JQuerry Files ############-->
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="js/additional-methods.min.js"></script>

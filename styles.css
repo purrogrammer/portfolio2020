@@ -403,7 +403,7 @@ form {
   flex-direction: column;
   /* 2 after contact card*/
   flex: 0 0 60%;
-
+  color: #0bce1c;
 }
 
 form input {
@@ -425,7 +425,7 @@ form textarea {
 input::placeholder,
 textarea::placeholder {
   /* text-transform: uppercase; */
-  color: #0d1317;
+  color: #0bce1c;
 }
 
 .form-btn {

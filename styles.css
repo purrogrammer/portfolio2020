@@ -162,12 +162,10 @@ nav {
 .services {
   min-height: 80vh;
   padding: 15px;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/cat-meme.jpg) center/cover fixed no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url(img/cat-meme.jpg) center/cover fixed no-repeat;
   display: flex;
   align-items: center;
 }
-
-background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/header-cat.jpeg) center/cover fixed no-repeat;
 
 .services-center {
   margin: 40px auto;
@@ -195,15 +193,18 @@ background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
 .service-text {
   /* line-height: 50px; */
   padding-left: 25px;
+  color: #191716;
 }
 
 .service-text h3 {
   text-transform: uppercase;
   padding-top: 20px;
+  color: #0bce1c;
+  text-shadow: -1px -1px #0c9917; 
 }
 
 .service-text p {
-  font-size: ;
+  font-size: 1rem;
   line-height: 1.5;
   margin-top: 15px;
 }

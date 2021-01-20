@@ -209,7 +209,9 @@
 <button id="contact-pop" class="glow-on-hover">Book Your FREE Consultation!</button>
 <div id="contactForm">
 
-  <h2>LET'S MAKE SOMETHING FABULOUS.</h2>
+    <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+
+  <!-- <h2>LET'S MAKE SOMETHING FABULOUS.</h2> -->
   <h4>Get in touch for more info, or to set up your FREE consultation!</h4>
   
   <form action="https://formspree.io/f/mqkgljpg" method="POST">
@@ -333,7 +335,7 @@
                 <img src="img/codelang.jpeg" alt="Sample photo">
                 <div class="text">
                   <h3>Love Overflow</h3>
-                  <p>Inspired by tech community site Stack Overflow, this crowd-sourced relationship Q&A/advice app was built using Angular/Typescript. Epicodus bootcamp individual project. </p>
+                  <p>Inspired by tech community site Stack Overflow, this crowd-sourced relationship Q&A/advice app was built using Angular/Typescript. </p>
                   <button onclick="window.location.href='https://github.com/purrogrammer/loveoverflow';">View repo</button>
                 </div>
               </article>
@@ -342,7 +344,7 @@
                   <img src="img/hike.png" alt="photo of code language">
                   <div class="text">
                     <h3>Down To Hike</h3>
-                    <p>A C#/SQL web app that connects hikers to trails and fellow hikers. Epicodus group project.
+                    <p>A C#/SQL web app that connects hikers to trails and fellow hikers.
                     <p></p>
                     </p>
                     <button onclick="window.location.href='https://github.com/purrogrammer/takeahike';">View repo</button>
@@ -527,6 +529,63 @@
         xhr.send(data);
       }
     </script>
+
+    <!-- popup header js -->
+<script> 
+    // function([string1, string2],target id,[color1,color2])    
+ consoleText(['Hello There\!', 'Let\'s Talk\!', 'Let\'s Make Something', ' Fabulous Together\!'], 'text',['green','rebeccapurple','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+</script>
+
+<!-- end popup header js -->
 
     <!-- popup trigger -->
 <script> 

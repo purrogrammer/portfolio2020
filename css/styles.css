@@ -12,13 +12,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
+  /* overflow-x: hidden; */
 } 
 
 
 .container {
-  margin-inline: auto;
-  width: min(90%, 70.5rem);
+  /* margin-inline: auto; */
+  /* width: min(90%, 70.5rem); */
+  min-width: 100vw;
 }
 
 h1 {
@@ -184,10 +185,22 @@ header {
 
 #hero h3 {
   /* text-transform: capitalize; */
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-style: italics;
   color: #efefee;
+  line-height: 1.3em;
   text-shadow: -1px -1px #0bce1c; 
+  font-style: italic;
+}
+
+#hero h2 {
+   /* font-family: "Raleway"; */
+  font-family: 'Press Start 2P', cursive;  
+  font-size: 1.3em;
+  font-style: italics;
+  color: #0bce1c;
+  line-height: 1.5em;
+  text-shadow: -1px -1px #000; 
   font-style: italic;
 }
 
@@ -228,8 +241,6 @@ nav {
   flex: 0 0 auto;
 }  
 
-
-
 .navbar {
   position: fixed;
   background-color: #23232e;
@@ -244,6 +255,7 @@ nav {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  z-index: 100;
 }
 
 .nav-item {
@@ -337,7 +349,7 @@ nav {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    z-index: 1001;
+    z-index: 100;
   }
 
   .logo {
@@ -346,6 +358,7 @@ nav {
 
   .navbar-nav {
     flex-direction: row;
+    z-index: 1001;
   }
 
   .nav-link {
@@ -535,8 +548,10 @@ text-shadow: -1px -1px #0c9917;
 /* #### Project Section #### */
 
 #projects {
-  padding: 40px 3rem  100px 3rem;
-  background-color: #f5f3f5;
+  width: 100%;
+  padding-top: 3rem;
+  /* padding: 40px 3rem  100px 3rem; */
+  background-color: #efefee;
 }
 
 #projects h1 {
@@ -661,7 +676,7 @@ text-shadow: -1px -1px #0c9917;
 
 /*############about#################*/
 
-section {
+/* section {
   padding: 4rem 0;
   @media (min-width: 40em) {
     header,
@@ -669,7 +684,7 @@ section {
       padding: 7rem 0;
     }
   }
-}
+} */
 
 .container-2 {
   margin-left: 2rem;
@@ -715,7 +730,7 @@ section {
 /* ===========Button Styling =============== */
 
 
-.glow-on-hover {
+.glow-on-hover1 {
   display: flex;
   margin: 1rem;
   padding: 1rem;
@@ -727,7 +742,6 @@ section {
   height: 50px;
   border: none;
   outline: none;
-  /* color: #fff; */
   color: #0bce1c;
   background: #111;
   cursor: pointer;
@@ -736,7 +750,7 @@ section {
   border-radius: 10px;
 }
 
-.glow-on-hover:before {
+.glow-on-hover1:before {
   content: '';
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
@@ -753,19 +767,19 @@ section {
   border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.glow-on-hover1:active {
     color: #000
 }
 
-.glow-on-hover:active:after {
+.glow-on-hover1:active:after {
     background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.glow-on-hover1:hover:before {
     opacity: 1;
 }
 
-.glow-on-hover:after {
+.glow-on-hover1:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -783,13 +797,25 @@ section {
     100% { background-position: 0 0; }
 }
 
+#about {
+  background-color: white;
+  width: 100vw;
+}
 #about .animation {
   align-items:center;
   justify-content: center;
   margin: 0 auto;
+
 }
 
-#about .glow-on-hover {
+#about .animation img {
+  padding-left: 4rem;
+  padding-top: 2rem;
+  z-index: -1;
+}
+
+
+#about .glow-on-hover1 {
   margin: 0 auto;
 }
 
@@ -837,57 +863,61 @@ section {
 
 
 /*###############contact##########*/
-
+#contact {
+  width: 100vw;
+}
 .contact {
   min-height: 80vh;
-  background:  linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(img/projects-1.jpeg) center/cover fixed no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), transparent),
+  url("https://i.ibb.co/yy4pWrf/projects-1.png");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .contact-card {
   /*  4*/
   flex: 0 0 80%;
   padding: 40px 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75);
   /* 1 after form*/
   display: flex;
   justify-content: center;
   align-items: center
 }
 
-form {
+#contact form {
   display: flex;
   flex-direction: column;
-  /* 2 after contact card*/
   flex: 0 0 60%;
   color: #0bce1c;
 }
 
-form input {
+#contact form input {
   margin: 10px 0;
+  border-radius: 20px;
 }
 
-form h3 {
+#contact form h3 {
   text-align: center;
-  /* text-transform: uppercase; */
   color: #0bce1c;
 }
 
-form input,
+#contact form input,
 form textarea {
   padding: 5px;
   border: 3px solid #0bce1c;
 }
 
-input::placeholder,
+#contact input::placeholder,
 textarea::placeholder {
-  /* text-transform: uppercase; */
   color: #0bce1c;
 }
 
-.form-btn {
+#contact .form-btn {
   margin: 20px;
   font-size: 20px;
   border-radius: 40px;
@@ -902,9 +932,13 @@ textarea::placeholder {
   background: #f5f3f5;
 }
 
+
+
 /*###########footer############*/
 
 footer {
+  display: flex;
+  flex-direction: row;
   background: #0bce1c;
   color: #0d1317;
   padding: 30px 10px;

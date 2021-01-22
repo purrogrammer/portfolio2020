@@ -1470,7 +1470,7 @@ var namespace = w[NAMESPACE_IDENTIFIER];
 
 var functions = [];
 var listener = function listener() {
-  DOCUMENT.removeEventListener('DOMContentLoaded', listener);
+  DOCUMENT.emoveEventListener('DOMContentLoaded', listener);
   loaded = 1;
   functions.map(function (fn) {
     return fn();
@@ -2589,11 +2589,11 @@ function generateMutation(node) {
   }
 }
 
-function remove(node) {
-  if (typeof node.remove === 'function') {
-    node.remove();
+function emove(node) {
+  if (typeof node.emove === 'function') {
+    node.emove();
   } else if (node && node.parentNode) {
-    node.parentNode.removeChild(node);
+    node.parentNode.emoveChild(node);
   }
 }
 
@@ -2614,9 +2614,9 @@ function searchPseudoElements(root) {
 
         if (pseudoElement) {
           if (pseudoElement.nextSibling && pseudoElement.nextSibling.textContent.indexOf(DATA_FA_PSEUDO_ELEMENT) > -1) {
-            remove(pseudoElement.nextSibling);
+            emove(pseudoElement.nextSibling);
           }
-          remove(pseudoElement);
+          emove(pseudoElement);
           pseudoElement = null;
         }
 
@@ -2648,8 +2648,8 @@ function onTree(root) {
   var hclAdd = function hclAdd(suffix) {
     return htmlClassList.add(HTML_CLASS_I2SVG_BASE_CLASS + '-' + suffix);
   };
-  var hclRemove = function hclRemove(suffix) {
-    return htmlClassList.remove(HTML_CLASS_I2SVG_BASE_CLASS + '-' + suffix);
+  var hclemove = function hclemove(suffix) {
+    return htmlClassList.emove(HTML_CLASS_I2SVG_BASE_CLASS + '-' + suffix);
   };
   var prefixes = Object.keys(styles);
   var prefixesDomQuery = ['.' + LAYERS_TEXT_CLASSNAME + ':not([' + DATA_FA_I2SVG + '])'].concat(prefixes.map(function (p) {
@@ -2664,7 +2664,7 @@ function onTree(root) {
 
   if (candidates.length > 0) {
     hclAdd('pending');
-    hclRemove('complete');
+    hclemove('complete');
   } else {
     return;
   }
@@ -2694,7 +2694,7 @@ function onTree(root) {
   perform(mutations, function () {
     hclAdd('active');
     hclAdd('complete');
-    hclRemove('pending');
+    hclemove('pending');
 
     if (typeof callback === 'function') callback();
   });

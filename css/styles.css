@@ -77,7 +77,8 @@ header {
 
 #hero .container h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2.5rem; 
+  font-size: 1.8rem; 
+  line-height: 1.5em;
   text-transform: uppercase;
   color: #0d1317;
   /* color: black; */
@@ -369,7 +370,7 @@ nav {
   }
 
   #hero .container h1 {
-    font-size: 5.5em;
+    font-size: 4.5em;
   }
 
   #projects h1 {
@@ -733,7 +734,7 @@ text-shadow: -1px -1px #0c9917;
 
 .about-text p {
   font-weight: 500;
-  paddding-bottom: 2em;
+  padding-bottom: 2em;
   /* overflow: hidden; */
 }
 
@@ -774,6 +775,12 @@ text-shadow: -1px -1px #0c9917;
   z-index: 0;
   border-radius: 9999px;
   overflow: visible;
+}
+
+.glow-on-hover1 a {
+  color: #0bce1c;
+  background: #111;
+  text-decoration: none;
 }
 
 .glow-on-hover1:before {

@@ -58,7 +58,7 @@ header {
   height: 100vh;
   width: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-    url("https://i.ibb.co/xCvm8F7/header-cat.jpg");
+    url("../img/header-cat.jpeg");
  background-size: cover;
   background-repeat: no-repeat; 
   text-align: center;
